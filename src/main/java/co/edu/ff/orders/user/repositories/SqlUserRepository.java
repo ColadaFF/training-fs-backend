@@ -83,7 +83,7 @@ public class SqlUserRepository implements UserRepository {
 
     @Override
     public Optional<UserCreated> findByUsername(Username username) {
-        String SQL = "SELECT ID, USERNAME, PASSWORD FROM USERS WHERE USERNAME = ?";
+        String SQL = "SELECT id, username, password FROM USERS WHERE username = ?";
         Object[] objects = {username.getValue()};
         try {
             UserCreated userCreated = jdbcTemplate.queryForObject(SQL, objects, rowMapper);

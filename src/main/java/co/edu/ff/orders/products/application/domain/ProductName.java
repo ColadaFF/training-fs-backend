@@ -1,4 +1,4 @@
-package co.edu.ff.orders.user.domain;
+package co.edu.ff.orders.products.application.domain;
 
 import co.edu.ff.orders.serialization.StringSerializable;
 import com.google.common.base.Preconditions;
@@ -6,13 +6,13 @@ import lombok.Value;
 import org.apache.commons.lang3.StringUtils;
 
 @Value(staticConstructor = "of")
-public class Username implements StringSerializable {
+public class ProductName implements StringSerializable {
     String value;
 
-    private Username(String value){
+    private ProductName(String value) {
         Preconditions.checkNotNull(value);
-        Preconditions.checkArgument(StringUtils.isNoneBlank(value));
-        Preconditions.checkArgument(value.length() >= 6);
+        Preconditions.checkArgument(StringUtils.isNotBlank(value), "Product name can't be blank");
+        Preconditions.checkArgument(StringUtils.length(value) <= 100, "Product name can not be longer than 100");
         this.value = value;
     }
 

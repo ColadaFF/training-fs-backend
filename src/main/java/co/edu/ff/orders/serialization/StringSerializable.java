@@ -1,4 +1,4 @@
-package co.edu.ff.orders.user.serialization;
+package co.edu.ff.orders.serialization;
 
 public interface StringSerializable {
     String valueOf();

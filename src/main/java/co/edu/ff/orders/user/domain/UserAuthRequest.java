@@ -1,6 +1,6 @@
 package co.edu.ff.orders.user.domain;
 
-import co.edu.ff.orders.common.Preconditions;
+import com.google.common.base.Preconditions;
 import lombok.Value;
 
 @Value(staticConstructor = "from")
