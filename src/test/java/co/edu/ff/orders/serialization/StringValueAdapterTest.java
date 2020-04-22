@@ -25,5 +25,15 @@ class StringValueAdapterTest {
 
     @Test
     void serialize() {
+        // organizar
+        String usernameString = "Username1234";
+        Username username = Username.of(usernameString);
+
+        //actuar
+        String actual = gson.toJson(username);
+
+        //comprueban
+        String expected = String.format("\"%s\"", username.getValue());
+        assertEquals(actual, expected);
     }
 }
