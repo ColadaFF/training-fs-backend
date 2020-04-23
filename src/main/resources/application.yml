@@ -2,5 +2,6 @@ spring:
   profiles:
     active: dev
 
+
 server:
   port: 18080

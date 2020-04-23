@@ -9,10 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
 
 
-    @GetMapping("/hello")
-    public String greeting() {
-        return "Hello world";
-    }
+
 
 
     @PostMapping("/authenticate")

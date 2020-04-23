@@ -1,4 +1,4 @@
-package co.edu.ff.orders.configuration;
+package co.edu.ff.orders.configuration.application;
 
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
