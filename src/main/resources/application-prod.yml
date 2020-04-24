@@ -1,10 +1,10 @@
 database:
-  host: localhost
+  host: postgres
   port: 5432
   username: postgres
   password: postgres
   database: orders
 
 elasticsearch:
-  host: localhost
+  host: elasticsearch
   port: 9200

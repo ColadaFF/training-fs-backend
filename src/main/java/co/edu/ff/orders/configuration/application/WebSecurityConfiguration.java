@@ -36,7 +36,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .hasRole("ADMIN")
                 .and()
                 .authorizeRequests()
-                .anyRequest()
+                .antMatchers("/api/***")
                 .authenticated()
                 .and()
                 .sessionManagement()

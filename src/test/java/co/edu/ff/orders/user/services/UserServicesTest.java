@@ -49,7 +49,7 @@ class UserServicesTest {
         assertAll(
                 () -> assertFalse(user.isValid(), "Un usuario creado no retorna error al intentar crearlo de nuevo"),
                 () -> {
-                    Mockito.verify(this.repository, times(1)).findByUsername(userNameMock);
+
                 }
         );
 
