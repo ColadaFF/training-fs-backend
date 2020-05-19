@@ -8,6 +8,9 @@ import co.edu.ff.orders.products.application.port.out.CreateProductPort;
 import co.edu.ff.orders.products.application.port.out.IndexProductPort;
 import io.vavr.control.Try;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.security.Principal;
 
 @UseCase
 @RequiredArgsConstructor
@@ -21,5 +24,10 @@ public class CreateProductService implements CreateProductUseCase {
         ProductNotCreated product = command.getProduct();
         return createProductPort.createProduct(product)
                 .flatMap(indexProductPort::indexProduct);
+    }
+
+    @Override
+    public Try<Boolean> userHasPermission(UserDetails principal) {
+        return Try.success(true);
     }
 }
